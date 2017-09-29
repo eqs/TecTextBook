@@ -1,0 +1,18 @@
+\documentclass[dvipdfmx]{standalone}
+\usepackage{tikz}
+\usepackage{tecfig}
+\usepackage{ifthen}
+\usetikzlibrary{calc}
+\usetikzlibrary{positioning}
+\begin{document}
+	\begin{tikzpicture}
+		\node[anchor=west] at (2, 2){スイッチの頭};
+		\node[anchor=west] at (2, 1){しっかり押し込む};
+		\node[anchor=west] at (2, 0){プッシュスイッチ本体};
+		
+		\coordinate (a) at (0, 0);
+		\draw ([xshift=-5mm]a) -- ++(0, -0.5);
+		\draw ([xshift=+5mm]a) -- ++(0, -0.5);
+		\draw ($(0, -0.5) + (0:5mm and 2.5mm)$) arc ($(0:-180:5mm and 2.5mm)$);
+	\end{tikzpicture}
+\end{document}
